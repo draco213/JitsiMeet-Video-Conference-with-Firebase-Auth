@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DashboardActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:layout_above="@+id/bottomNavigationView2"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="397dp"
+        android:layout_height="63dp"
+        android:background="#DDDBDB"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="408dp"
+        android:layout_height="161dp"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="2dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="463dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Please share this code to get started  :-)"
+                android:textColor="#DC4A3F"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/codeBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Secret Code "
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="401dp"
+                android:layout_height="122dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/joinBtn"
+                    android:layout_width="216dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="JOIN"
+                    android:textSize="20sp"
+                    app:backgroundTint="#83D327" />
+
+                <Button
+                    android:id="@+id/shareBtn"
+                    android:layout_width="216dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SHARE"
+                    android:textSize="20sp" />
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="216dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="LOGOUT"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/temp699"
+        android:layout_width="163dp"
+        android:layout_height="190dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/vcvc"
+        tools:ignore="MissingPrefix" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
